@@ -1,4 +1,3 @@
-use("aggregations");
 db.trips.aggregate([
   {
     $addFields: {
