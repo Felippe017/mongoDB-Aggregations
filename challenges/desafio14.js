@@ -9,12 +9,12 @@ db.trips.aggregate([
   {
     $group: {
       _id: "$bikeid",
-      avgViagens: { $avg: "$diferencaTime" },
+      avgViagem: { $avg: "$diferencaTime" },
     },
   },
   {
     $addFields: {
-      resultadoMinutos: { $divide: ["$avgViagens", 1000] },
+      resultadoMinutos: { $divide: ["$avgViagem", 1000] },
     },
   },
   {
